@@ -38,6 +38,12 @@ class HomeViewController: UIViewController {
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        DispatchQueue.main.async {
+            self.roomsTableView.reloadData()
+        }
+    }
+    
     @objc func handleAddRoom() {
         let alertController = UIAlertController(title: "Création de pièce", message: "", preferredStyle: .alert)
         alertController.addTextField { textField in

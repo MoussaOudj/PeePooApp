@@ -9,7 +9,7 @@ import UIKit
 import HomeKit
 
 class RoomViewController: UIViewController {
-
+    
     var home: HMHome!
     var room: HMRoom!
     @IBOutlet var accessoryTableView: UITableView!
@@ -39,17 +39,9 @@ extension RoomViewController: AccessoryBrowserViewControllerDelegate {
     func accessoryBrowserViewController(_ abvc: AccessoryBrowserViewController, didSelectNew accessory: HMAccessory) {
         self.home.addAndSetupAccessories { err in
             abvc.dismiss(animated: true) {
-                print(accessory)
                 self.accessoryTableView.reloadData()
             }
         }
-//        self.home.addAccessory(accessory) { err in
-//            self.home.assignAccessory(accessory, to: self.room) { err in
-//                abvc.dismiss(animated: true) {
-//                    print(accessory)
-//                }
-//            }
-//        }
     }
 }
 
@@ -64,7 +56,7 @@ extension RoomViewController: UITableViewDelegate {
 extension RoomViewController: UITableViewDataSource {
     
     static let accessoryCellId =  "acid"
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: RoomViewController.accessoryCellId) ?? UITableViewCell(style: .default, reuseIdentifier: RoomViewController.accessoryCellId)
         let accessory = self.room.accessories[indexPath.row]
