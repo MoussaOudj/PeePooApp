@@ -37,13 +37,19 @@ class RoomViewController: UIViewController {
 
 extension RoomViewController: AccessoryBrowserViewControllerDelegate {
     func accessoryBrowserViewController(_ abvc: AccessoryBrowserViewController, didSelectNew accessory: HMAccessory) {
-        self.home.addAccessory(accessory) { err in
-            self.home.assignAccessory(accessory, to: self.room) { err in
-                abvc.dismiss(animated: true) {
-                    print(accessory)
-                }
+        self.home.addAndSetupAccessories { err in
+            abvc.dismiss(animated: true) {
+                print(accessory)
+                self.accessoryTableView.reloadData()
             }
         }
+//        self.home.addAccessory(accessory) { err in
+//            self.home.assignAccessory(accessory, to: self.room) { err in
+//                abvc.dismiss(animated: true) {
+//                    print(accessory)
+//                }
+//            }
+//        }
     }
 }
 

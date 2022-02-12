@@ -9,7 +9,7 @@ import UIKit
 import HomeKit
 
 class HomeViewController: UIViewController {
-
+    
     var home: HMHome!
     @IBOutlet var roomsTableView: UITableView!
     
@@ -25,6 +25,17 @@ class HomeViewController: UIViewController {
         self.roomsTableView.dataSource = self
         let addRoomButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(handleAddRoom))
         self.navigationItem.rightBarButtonItem = addRoomButton
+        
+        if self.home.rooms.count == 0 {
+            print("NO ROOM")
+            self.home.addRoom(withName: "PeePooPeeRoom") { room, err in
+                self.roomsTableView.reloadData()
+            }
+        }else {
+            for room in self.home.rooms {
+                print("ROOM : \(room.name)")
+            }
+        }
     }
     
     @objc func handleAddRoom() {
@@ -74,6 +85,13 @@ extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         let room = self.home.rooms[indexPath.row]
+        room.accessories.forEach { accessory in
+            self.home.removeAccessory(accessory) { err in
+                guard err == nil else {
+                    return
+                }
+            }
+        }
         self.home.removeRoom(room) { err in
             guard err == nil else {
                 return
