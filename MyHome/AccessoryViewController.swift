@@ -7,6 +7,7 @@
 
 import UIKit
 import HomeKit
+import WatchConnectivity
 
 class AccessoryViewController: UIViewController {
     
@@ -28,6 +29,19 @@ class AccessoryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
+        if WCSession.isSupported() {
+            let wcsession = WCSession.default
+            wcsession.delegate = self
+            wcsession.activate()
+        }
+        
+        let session = WCSession.default
+        print("session reachable ? : \(session.isReachable)")
+        
+        
         self.accessories = self.room.accessories
         Timer.scheduledTimer(withTimeInterval: 2, repeats: true) { _ in
             self.updateTemp()
@@ -103,6 +117,12 @@ class AccessoryViewController: UIViewController {
                 self.tempLabel.text = "404"
                 return
             }
+            
+            if (WCSession.default.isReachable) {
+                let message = ["temp": "\(temp)"]
+                WCSession.default.sendMessage(message, replyHandler: nil)
+            }
+            
             self.tempLabel.text = "\(temp)"
         }
     }
@@ -120,6 +140,11 @@ class AccessoryViewController: UIViewController {
             guard let isSitting = characteristicMotion.value as? Bool else {
                 self.motionLabel.text = "erreur"
                 return
+            }
+            
+            if (WCSession.default.isReachable) {
+                let message = ["isSitting": "\(isSitting)"]
+                WCSession.default.sendMessage(message, replyHandler: nil)
             }
             self.motionLabel.text = "\(isSitting)"
         }
@@ -139,21 +164,53 @@ class AccessoryViewController: UIViewController {
                 self.seatCoverInput.isOn = false
                 return
             }
+            
+            if (WCSession.default.isReachable) {
+                let message = ["isOn": isOn]
+                WCSession.default.sendMessage(message, replyHandler: nil)
+            }
             self.seatCoverInput.isOn = isOn
         }
     }
     
     @IBAction func onSwitch(_ sender: UISwitch) {
-        print(sender.isOn)
         guard let characteristicTargetSeatCover = self.getTargetSeatCoverCharacteristic() else {
             print("no target seat characteristics")
             return
         }
         
         characteristicTargetSeatCover.writeValue(sender.isOn) { err in
-            print(err)
+            return
         }
         
     }
+    
+}
+
+
+extension AccessoryViewController: WCSessionDelegate {
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        
+    }
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        
+    }
+    
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+        guard let isOn = message["isOn"] as? Bool else {
+            return
+        }
+        
+        DispatchQueue.main.async {
+            self.seatCoverInput.isOn = isOn
+            self.onSwitch(self.seatCoverInput)
+        }
+    }
+    
     
 }

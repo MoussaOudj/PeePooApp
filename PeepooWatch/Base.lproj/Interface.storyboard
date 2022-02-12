@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19529" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19514"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="PeepooWatch" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" spacing="10" id="rv2-yO-xrQ">
+                            <items>
+                                <switch width="1" alignment="left" value="YES" title="Switch" id="LCM-jD-MLq">
+                                    <connections>
+                                        <action selector="seatWriter:" destination="AgC-eL-Hgc" id="s7t-0G-TUo"/>
+                                    </connections>
+                                </switch>
+                                <label alignment="center" text="Peepoo" id="69c-7U-WNY"/>
+                                <label alignment="center" text="Label" id="vMG-1Q-LxM"/>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="isSomeoneSitting" destination="vMG-1Q-LxM" id="vIR-FG-b73"/>
+                        <outlet property="seatCover" destination="LCM-jD-MLq" id="mct-ra-DKh"/>
+                        <outlet property="tempLabel" destination="69c-7U-WNY" id="iv4-bY-whq"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-18" y="-52"/>
+        </scene>
+    </scenes>
+</document>

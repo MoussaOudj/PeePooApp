@@ -14,6 +14,7 @@ class StartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let manager = HMHomeManager()
         manager.delegate = self
         print("count : \(manager.homes.count)")

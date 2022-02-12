@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C59A21327B7FC2A00BA1798 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C59A21127B7FC2A00BA1798 /* Interface.storyboard */; };
+		1C59A21527B7FC2B00BA1798 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C59A21427B7FC2B00BA1798 /* Assets.xcassets */; };
+		1C59A21B27B7FC2B00BA1798 /* PeepooWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1C59A21A27B7FC2B00BA1798 /* PeepooWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1C59A22027B7FC2B00BA1798 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C59A21F27B7FC2B00BA1798 /* InterfaceController.swift */; };
+		1C59A22227B7FC2B00BA1798 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C59A22127B7FC2B00BA1798 /* ExtensionDelegate.swift */; };
+		1C59A22427B7FC2B00BA1798 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C59A22327B7FC2B00BA1798 /* ComplicationController.swift */; };
+		1C59A22627B7FC2D00BA1798 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C59A22527B7FC2D00BA1798 /* Assets.xcassets */; };
+		1C59A22A27B7FC2D00BA1798 /* PeepooWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 1C59A20F27B7FC2A00BA1798 /* PeepooWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A3939AC22746904C00412190 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3939AC12746904C00412190 /* AppDelegate.swift */; };
 		A3939ACB2746904E00412190 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3939ACA2746904E00412190 /* Assets.xcassets */; };
 		A3939ACE2746904E00412190 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3939ACC2746904E00412190 /* LaunchScreen.storyboard */; };
@@ -23,6 +31,23 @@
 		A3EAA254276B75F1005F2A4A /* AccessoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3EAA252276B75F1005F2A4A /* AccessoryViewController.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1C59A21C27B7FC2B00BA1798 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3939AB62746904C00412190 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C59A21927B7FC2B00BA1798;
+			remoteInfo = "PeepooWatch WatchKit Extension";
+		};
+		1C59A22827B7FC2D00BA1798 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3939AB62746904C00412190 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C59A20E27B7FC2A00BA1798;
+			remoteInfo = PeepooWatch;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		1C59A1E527B7E90200BA1798 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -30,13 +55,34 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
+				1C59A22A27B7FC2D00BA1798 /* PeepooWatch.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C59A22E27B7FC2D00BA1798 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1C59A21B27B7FC2B00BA1798 /* PeepooWatch WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1C59A20F27B7FC2A00BA1798 /* PeepooWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeepooWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C59A21227B7FC2A00BA1798 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		1C59A21427B7FC2B00BA1798 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1C59A21A27B7FC2B00BA1798 /* PeepooWatch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "PeepooWatch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C59A21F27B7FC2B00BA1798 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		1C59A22127B7FC2B00BA1798 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		1C59A22327B7FC2B00BA1798 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		1C59A22527B7FC2D00BA1798 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1C59A22727B7FC2D00BA1798 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3939ABE2746904C00412190 /* PeePooPee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeePooPee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3939AC12746904C00412190 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3939ACA2746904E00412190 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,6 +103,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1C59A21727B7FC2B00BA1798 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A3939ABB2746904C00412190 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -68,10 +121,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C59A21027B7FC2A00BA1798 /* PeepooWatch */ = {
+			isa = PBXGroup;
+			children = (
+				1C59A21127B7FC2A00BA1798 /* Interface.storyboard */,
+				1C59A21427B7FC2B00BA1798 /* Assets.xcassets */,
+			);
+			path = PeepooWatch;
+			sourceTree = "<group>";
+		};
+		1C59A21E27B7FC2B00BA1798 /* PeepooWatch WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1C59A21F27B7FC2B00BA1798 /* InterfaceController.swift */,
+				1C59A22127B7FC2B00BA1798 /* ExtensionDelegate.swift */,
+				1C59A22327B7FC2B00BA1798 /* ComplicationController.swift */,
+				1C59A22527B7FC2D00BA1798 /* Assets.xcassets */,
+				1C59A22727B7FC2D00BA1798 /* Info.plist */,
+			);
+			path = "PeepooWatch WatchKit Extension";
+			sourceTree = "<group>";
+		};
 		A3939AB52746904C00412190 = {
 			isa = PBXGroup;
 			children = (
 				A3939AC02746904C00412190 /* MyHome */,
+				1C59A21027B7FC2A00BA1798 /* PeepooWatch */,
+				1C59A21E27B7FC2B00BA1798 /* PeepooWatch WatchKit Extension */,
 				A3939ABF2746904C00412190 /* Products */,
 				A3939AD62746906700412190 /* Frameworks */,
 			);
@@ -81,6 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				A3939ABE2746904C00412190 /* PeePooPee.app */,
+				1C59A20F27B7FC2A00BA1798 /* PeepooWatch.app */,
+				1C59A21A27B7FC2B00BA1798 /* PeepooWatch WatchKit Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,6 +196,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1C59A20E27B7FC2A00BA1798 /* PeepooWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C59A22F27B7FC2D00BA1798 /* Build configuration list for PBXNativeTarget "PeepooWatch" */;
+			buildPhases = (
+				1C59A20D27B7FC2A00BA1798 /* Resources */,
+				1C59A22E27B7FC2D00BA1798 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1C59A21D27B7FC2B00BA1798 /* PBXTargetDependency */,
+			);
+			name = PeepooWatch;
+			productName = PeepooWatch;
+			productReference = 1C59A20F27B7FC2A00BA1798 /* PeepooWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		1C59A21927B7FC2B00BA1798 /* PeepooWatch WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C59A22B27B7FC2D00BA1798 /* Build configuration list for PBXNativeTarget "PeepooWatch WatchKit Extension" */;
+			buildPhases = (
+				1C59A21627B7FC2B00BA1798 /* Sources */,
+				1C59A21727B7FC2B00BA1798 /* Frameworks */,
+				1C59A21827B7FC2B00BA1798 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PeepooWatch WatchKit Extension";
+			productName = "PeepooWatch WatchKit Extension";
+			productReference = 1C59A21A27B7FC2B00BA1798 /* PeepooWatch WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		A3939ABD2746904C00412190 /* PeePooPee */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A3939AD22746904E00412190 /* Build configuration list for PBXNativeTarget "PeePooPee" */;
@@ -130,6 +242,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				1C59A22927B7FC2D00BA1798 /* PBXTargetDependency */,
 			);
 			name = PeePooPee;
 			productName = MyHome;
@@ -146,6 +259,12 @@
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1310;
 				TargetAttributes = {
+					1C59A20E27B7FC2A00BA1798 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					1C59A21927B7FC2B00BA1798 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
 					A3939ABD2746904C00412190 = {
 						CreatedOnToolsVersion = 13.1;
 					};
@@ -165,11 +284,30 @@
 			projectRoot = "";
 			targets = (
 				A3939ABD2746904C00412190 /* PeePooPee */,
+				1C59A20E27B7FC2A00BA1798 /* PeepooWatch */,
+				1C59A21927B7FC2B00BA1798 /* PeepooWatch WatchKit Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1C59A20D27B7FC2A00BA1798 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C59A21527B7FC2B00BA1798 /* Assets.xcassets in Resources */,
+				1C59A21327B7FC2A00BA1798 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C59A21827B7FC2B00BA1798 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C59A22627B7FC2D00BA1798 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A3939ABC2746904C00412190 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -187,6 +325,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1C59A21627B7FC2B00BA1798 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C59A22227B7FC2B00BA1798 /* ExtensionDelegate.swift in Sources */,
+				1C59A22027B7FC2B00BA1798 /* InterfaceController.swift in Sources */,
+				1C59A22427B7FC2B00BA1798 /* ComplicationController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A3939ABA2746904C00412190 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -202,7 +350,28 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		1C59A21D27B7FC2B00BA1798 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1C59A21927B7FC2B00BA1798 /* PeepooWatch WatchKit Extension */;
+			targetProxy = 1C59A21C27B7FC2B00BA1798 /* PBXContainerItemProxy */;
+		};
+		1C59A22927B7FC2D00BA1798 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1C59A20E27B7FC2A00BA1798 /* PeepooWatch */;
+			targetProxy = 1C59A22827B7FC2D00BA1798 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		1C59A21127B7FC2A00BA1798 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1C59A21227B7FC2A00BA1798 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		A3939ACC2746904E00412190 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -214,6 +383,120 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1C59A22C27B7FC2D00BA1798 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VR3Q289XTV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "PeepooWatch WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "PeepooWatch WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = PeepooWatch_WatchKit_Extension.ComplicationController;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKExtensionDelegateClassName = PeepooWatch_WatchKit_Extension.ExtensionDelegate;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.moudj.MyHomeProf.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		1C59A22D27B7FC2D00BA1798 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VR3Q289XTV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "PeepooWatch WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "PeepooWatch WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = PeepooWatch_WatchKit_Extension.ComplicationController;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKExtensionDelegateClassName = PeepooWatch_WatchKit_Extension.ExtensionDelegate;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.moudj.MyHomeProf.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
+		1C59A23027B7FC2D00BA1798 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VR3Q289XTV;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = PeepooWatch_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = PeepooWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.moudj.MyHomeProf;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.moudj.MyHomeProf.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		1C59A23127B7FC2D00BA1798 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VR3Q289XTV;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = PeepooWatch_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = PeepooWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.moudj.MyHomeProf;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.moudj.MyHomeProf.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
 		A3939AD02746904E00412190 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -338,7 +621,7 @@
 				CODE_SIGN_ENTITLEMENTS = MyHome/MyHome.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9KB8H9886R;
+				DEVELOPMENT_TEAM = VR3Q289XTV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyHome/Info.plist;
 				INFOPLIST_KEY_NSHomeKitUsageDescription = "PeePooPee souhaite accèder aux informations de votre maison";
@@ -351,7 +634,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.esgi.MyHomeProf;
+				PRODUCT_BUNDLE_IDENTIFIER = com.moudj.MyHomeProf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -367,7 +650,7 @@
 				CODE_SIGN_ENTITLEMENTS = MyHome/MyHome.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9KB8H9886R;
+				DEVELOPMENT_TEAM = VR3Q289XTV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyHome/Info.plist;
 				INFOPLIST_KEY_NSHomeKitUsageDescription = "PeePooPee souhaite accèder aux informations de votre maison";
@@ -380,7 +663,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.esgi.MyHomeProf;
+				PRODUCT_BUNDLE_IDENTIFIER = com.moudj.MyHomeProf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -391,6 +674,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1C59A22B27B7FC2D00BA1798 /* Build configuration list for PBXNativeTarget "PeepooWatch WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C59A22C27B7FC2D00BA1798 /* Debug */,
+				1C59A22D27B7FC2D00BA1798 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1C59A22F27B7FC2D00BA1798 /* Build configuration list for PBXNativeTarget "PeepooWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C59A23027B7FC2D00BA1798 /* Debug */,
+				1C59A23127B7FC2D00BA1798 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A3939AB92746904C00412190 /* Build configuration list for PBXProject "PeePooPee" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
