@@ -15,6 +15,8 @@
 		1C59A22427B7FC2B00BA1798 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C59A22327B7FC2B00BA1798 /* ComplicationController.swift */; };
 		1C59A22627B7FC2D00BA1798 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C59A22527B7FC2D00BA1798 /* Assets.xcassets */; };
 		1C59A22A27B7FC2D00BA1798 /* PeepooWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 1C59A20F27B7FC2A00BA1798 /* PeepooWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A001E3D527B87EF500B47744 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A001E3D427B87EF500B47744 /* UIView+Extension.swift */; };
+		A001E3D727B87F4400B47744 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A001E3D627B87F4400B47744 /* UIButton+Extension.swift */; };
 		A3939AC22746904C00412190 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3939AC12746904C00412190 /* AppDelegate.swift */; };
 		A3939ACB2746904E00412190 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3939ACA2746904E00412190 /* Assets.xcassets */; };
 		A3939ACE2746904E00412190 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3939ACC2746904E00412190 /* LaunchScreen.storyboard */; };
@@ -83,6 +85,8 @@
 		1C59A22327B7FC2B00BA1798 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		1C59A22527B7FC2D00BA1798 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C59A22727B7FC2D00BA1798 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A001E3D427B87EF500B47744 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		A001E3D627B87F4400B47744 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		A3939ABE2746904C00412190 /* PeePooPee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeePooPee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3939AC12746904C00412190 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3939ACA2746904E00412190 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -142,6 +146,46 @@
 			path = "PeepooWatch WatchKit Extension";
 			sourceTree = "<group>";
 		};
+		A001E3D027B87E0E00B47744 /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				A3939ADC2746956F00412190 /* StartViewController.xib */,
+				A3EAA246276B3EDE005F2A4A /* HomeViewController.xib */,
+				A3EAA24A276B5078005F2A4A /* RoomViewController.xib */,
+				A3EAA24E276B5278005F2A4A /* AccessoryBrowserViewController.xib */,
+				A3EAA252276B75F1005F2A4A /* AccessoryViewController.xib */,
+			);
+			path = XIB;
+			sourceTree = "<group>";
+		};
+		A001E3D127B87E1900B47744 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A3939ADB2746956F00412190 /* StartViewController.swift */,
+				A3EAA245276B3EDE005F2A4A /* HomeViewController.swift */,
+				A3EAA249276B5078005F2A4A /* RoomViewController.swift */,
+				A3EAA24D276B5278005F2A4A /* AccessoryBrowserViewController.swift */,
+				A3EAA251276B75F1005F2A4A /* AccessoryViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A001E3D227B87E2C00B47744 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A001E3D427B87EF500B47744 /* UIView+Extension.swift */,
+				A001E3D627B87F4400B47744 /* UIButton+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A001E3D327B87E3700B47744 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Ressources;
+			sourceTree = "<group>";
+		};
 		A3939AB52746904C00412190 = {
 			isa = PBXGroup;
 			children = (
@@ -168,19 +212,13 @@
 			children = (
 				A3939AD52746906600412190 /* MyHome.entitlements */,
 				A3939AC12746904C00412190 /* AppDelegate.swift */,
+				A001E3D327B87E3700B47744 /* Ressources */,
+				A001E3D227B87E2C00B47744 /* Extensions */,
+				A001E3D127B87E1900B47744 /* ViewController */,
+				A001E3D027B87E0E00B47744 /* XIB */,
 				A3939ACA2746904E00412190 /* Assets.xcassets */,
 				A3939ACC2746904E00412190 /* LaunchScreen.storyboard */,
 				A3939ACF2746904E00412190 /* Info.plist */,
-				A3939ADB2746956F00412190 /* StartViewController.swift */,
-				A3939ADC2746956F00412190 /* StartViewController.xib */,
-				A3EAA245276B3EDE005F2A4A /* HomeViewController.swift */,
-				A3EAA246276B3EDE005F2A4A /* HomeViewController.xib */,
-				A3EAA249276B5078005F2A4A /* RoomViewController.swift */,
-				A3EAA24A276B5078005F2A4A /* RoomViewController.xib */,
-				A3EAA24D276B5278005F2A4A /* AccessoryBrowserViewController.swift */,
-				A3EAA24E276B5278005F2A4A /* AccessoryBrowserViewController.xib */,
-				A3EAA251276B75F1005F2A4A /* AccessoryViewController.swift */,
-				A3EAA252276B75F1005F2A4A /* AccessoryViewController.xib */,
 			);
 			path = MyHome;
 			sourceTree = "<group>";
@@ -340,9 +378,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3939AC22746904C00412190 /* AppDelegate.swift in Sources */,
+				A001E3D527B87EF500B47744 /* UIView+Extension.swift in Sources */,
 				A3939ADD2746956F00412190 /* StartViewController.swift in Sources */,
 				A3EAA247276B3EDE005F2A4A /* HomeViewController.swift in Sources */,
 				A3EAA24F276B5278005F2A4A /* AccessoryBrowserViewController.swift in Sources */,
+				A001E3D727B87F4400B47744 /* UIButton+Extension.swift in Sources */,
 				A3EAA24B276B5078005F2A4A /* RoomViewController.swift in Sources */,
 				A3EAA253276B75F1005F2A4A /* AccessoryViewController.swift in Sources */,
 			);
@@ -389,7 +429,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VR3Q289XTV;
+				DEVELOPMENT_TEAM = F6QF2YD33Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "PeepooWatch WatchKit Extension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "PeepooWatch WatchKit Extension";
@@ -403,7 +443,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.moudj.MyHomeProf.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cnguyen.peepoopeeapp.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -420,7 +460,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VR3Q289XTV;
+				DEVELOPMENT_TEAM = F6QF2YD33Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "PeepooWatch WatchKit Extension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "PeepooWatch WatchKit Extension";
@@ -434,7 +474,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.moudj.MyHomeProf.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cnguyen.peepoopeeapp.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -451,17 +491,19 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VR3Q289XTV;
+				DEVELOPMENT_TEAM = F6QF2YD33Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = PeepooWatch_WatchKit_Extension;
 				INFOPLIST_KEY_CFBundleDisplayName = PeepooWatch;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.moudj.MyHomeProf;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.cnguyen.peepoopeeapp;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.moudj.MyHomeProf.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cnguyen.peepoopeeapp.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -477,17 +519,19 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VR3Q289XTV;
+				DEVELOPMENT_TEAM = F6QF2YD33Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = PeepooWatch_WatchKit_Extension;
 				INFOPLIST_KEY_CFBundleDisplayName = PeepooWatch;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.moudj.MyHomeProf;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.cnguyen.peepoopeeapp;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.moudj.MyHomeProf.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cnguyen.peepoopeeapp.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -621,7 +665,7 @@
 				CODE_SIGN_ENTITLEMENTS = MyHome/MyHome.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VR3Q289XTV;
+				DEVELOPMENT_TEAM = F6QF2YD33Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyHome/Info.plist;
 				INFOPLIST_KEY_NSHomeKitUsageDescription = "PeePooPee souhaite accèder aux informations de votre maison";
@@ -634,7 +678,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.moudj.MyHomeProf;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cnguyen.peepoopeeapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -650,7 +694,7 @@
 				CODE_SIGN_ENTITLEMENTS = MyHome/MyHome.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VR3Q289XTV;
+				DEVELOPMENT_TEAM = F6QF2YD33Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyHome/Info.plist;
 				INFOPLIST_KEY_NSHomeKitUsageDescription = "PeePooPee souhaite accèder aux informations de votre maison";
@@ -663,7 +707,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.moudj.MyHomeProf;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cnguyen.peepoopeeapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

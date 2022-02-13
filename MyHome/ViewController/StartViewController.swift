@@ -9,23 +9,33 @@ import UIKit
 import HomeKit
 
 class StartViewController: UIViewController {
-
+    @IBOutlet weak var startButton: UIButton!
     var homeManager: HMHomeManager!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        configureHomeManager()
+        configureComponents()
+    }
+    
+    func configureHomeManager() {
         let manager = HMHomeManager()
         manager.delegate = self
         print("count : \(manager.homes.count)")
         if manager.homes.count == 0 {
             manager.addHome(withName: "PeePooPee") { home, err in
-                print(home)
+                print(home ?? "Homeless")
             }
-        }else {
+        } else {
             
         }
         self.homeManager = manager
+    }
+    
+    func configureComponents() {
+        view.setGradientBackground()
+        
+        startButton.setUpRoundedButton(title: "Start Peepoopee")
     }
     
     @IBAction func handleSelectHome() {

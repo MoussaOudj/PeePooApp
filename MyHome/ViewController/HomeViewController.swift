@@ -21,21 +21,34 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureRooms()
+        configureComponents()
+    }
+    
+    func configureRooms() {
         self.roomsTableView.delegate = self
         self.roomsTableView.dataSource = self
-        let addRoomButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(handleAddRoom))
-        self.navigationItem.rightBarButtonItem = addRoomButton
+        
         
         if self.home.rooms.count == 0 {
             print("NO ROOM")
             self.home.addRoom(withName: "PeePooPeeRoom") { room, err in
                 self.roomsTableView.reloadData()
             }
-        }else {
+        } else {
             for room in self.home.rooms {
                 print("ROOM : \(room.name)")
             }
         }
+    }
+    
+    func configureComponents() {
+        view.setGradientBackground()
+        roomsTableView.backgroundColor = .clear
+        let addRoomButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(handleAddRoom))
+        self.navigationItem.rightBarButtonItem = addRoomButton
+        self.navigationItem.hidesBackButton = true
+        self.title = "Choose a room"
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -80,14 +93,29 @@ extension HomeViewController: UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: HomeViewController.roomCellId) ?? UITableViewCell(style: .default, reuseIdentifier: HomeViewController.roomCellId)
         let room = self.home.rooms[indexPath.row]
-        cell.textLabel?.text = "\(room.name): \(room.accessories.count) accessoire(s)"
-        return cell
+        // Set up cell view
+        cell.contentView.layer.masksToBounds = true
         
+        cell.layer.cornerRadius = 10
+        cell.layer.masksToBounds = true
+        
+        cell.textLabel?.text = "\(room.name.capitalized)"
+        cell.textLabel?.tintColor = .white
+        cell.textLabel?.font = UIFont(name:"HelveticaNeue-Bold", size: 16.0)
+        cell.textLabel?.textAlignment = .center
+        cell.setupShadow()
+        cell.backgroundColor = UIColor(red: 0.03, green: 0.62, blue: 0.91, alpha: 1.00)
+        
+        return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.home.rooms.count
     }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+            return 5.0
+        }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         let room = self.home.rooms[indexPath.row]
