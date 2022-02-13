@@ -7,9 +7,11 @@
 
 import UIKit
 import HomeKit
+import Lottie
 
 class StartViewController: UIViewController {
     @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var pepeAnimation: AnimationView!
     var homeManager: HMHomeManager!
     
     override func viewDidLoad() {
@@ -34,8 +36,13 @@ class StartViewController: UIViewController {
     
     func configureComponents() {
         view.setGradientBackground()
-        
         startButton.setUpRoundedButton(title: "Start Peepoopee")
+        pepeAnimation.backgroundColor = .clear
+        pepeAnimation!.frame = view.bounds
+        pepeAnimation!.contentMode = .scaleAspectFit
+        pepeAnimation!.loopMode = .loop
+        pepeAnimation!.animationSpeed = 0.5
+        pepeAnimation!.play()
     }
     
     @IBAction func handleSelectHome() {

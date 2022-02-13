@@ -15,8 +15,11 @@
 		1C59A22427B7FC2B00BA1798 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C59A22327B7FC2B00BA1798 /* ComplicationController.swift */; };
 		1C59A22627B7FC2D00BA1798 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C59A22527B7FC2D00BA1798 /* Assets.xcassets */; };
 		1C59A22A27B7FC2D00BA1798 /* PeepooWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 1C59A20F27B7FC2A00BA1798 /* PeepooWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		288CBC629E36E4932D74DA11 /* Pods_PeepooWatch_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F2C0A5D14C938E9BF0BEFD /* Pods_PeepooWatch_WatchKit_Extension.framework */; };
+		32E52CD480EF291C63683204 /* Pods_PeepooWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE3AC009C230B32D7159E1F4 /* Pods_PeepooWatch.framework */; };
 		A001E3D527B87EF500B47744 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A001E3D427B87EF500B47744 /* UIView+Extension.swift */; };
 		A001E3D727B87F4400B47744 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A001E3D627B87F4400B47744 /* UIButton+Extension.swift */; };
+		A08410D127B88C6000F13184 /* 17081-pepe-poo-poo.json in Resources */ = {isa = PBXBuildFile; fileRef = A08410D027B88C6000F13184 /* 17081-pepe-poo-poo.json */; };
 		A3939AC22746904C00412190 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3939AC12746904C00412190 /* AppDelegate.swift */; };
 		A3939ACB2746904E00412190 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3939ACA2746904E00412190 /* Assets.xcassets */; };
 		A3939ACE2746904E00412190 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3939ACC2746904E00412190 /* LaunchScreen.storyboard */; };
@@ -31,6 +34,7 @@
 		A3EAA250276B5278005F2A4A /* AccessoryBrowserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3EAA24E276B5278005F2A4A /* AccessoryBrowserViewController.xib */; };
 		A3EAA253276B75F1005F2A4A /* AccessoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EAA251276B75F1005F2A4A /* AccessoryViewController.swift */; };
 		A3EAA254276B75F1005F2A4A /* AccessoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3EAA252276B75F1005F2A4A /* AccessoryViewController.xib */; };
+		BAEA079A73A1916B19ECCAF9 /* Pods_PeePooPee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23008F6E8189B41A1C2E3CAB /* Pods_PeePooPee.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +80,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		069C5BEDEB5F23F69A51DA3C /* Pods-PeepooWatch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeepooWatch.release.xcconfig"; path = "Target Support Files/Pods-PeepooWatch/Pods-PeepooWatch.release.xcconfig"; sourceTree = "<group>"; };
 		1C59A20F27B7FC2A00BA1798 /* PeepooWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeepooWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C59A21227B7FC2A00BA1798 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		1C59A21427B7FC2B00BA1798 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -85,8 +90,15 @@
 		1C59A22327B7FC2B00BA1798 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		1C59A22527B7FC2D00BA1798 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C59A22727B7FC2D00BA1798 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23008F6E8189B41A1C2E3CAB /* Pods_PeePooPee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PeePooPee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D48C9A197CE4FB8F8F55A9E /* Pods-PeepooWatch WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeepooWatch WatchKit Extension.release.xcconfig"; path = "Target Support Files/Pods-PeepooWatch WatchKit Extension/Pods-PeepooWatch WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		340EFA42EB8E27DF78E77C87 /* Pods-PeepooWatch WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeepooWatch WatchKit Extension.debug.xcconfig"; path = "Target Support Files/Pods-PeepooWatch WatchKit Extension/Pods-PeepooWatch WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		3D6E746290CC1865FB243F8B /* Pods-PeepooWatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeepooWatch.debug.xcconfig"; path = "Target Support Files/Pods-PeepooWatch/Pods-PeepooWatch.debug.xcconfig"; sourceTree = "<group>"; };
+		71F2549D6B652DFB49EF565F /* Pods-PeePooPee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeePooPee.debug.xcconfig"; path = "Target Support Files/Pods-PeePooPee/Pods-PeePooPee.debug.xcconfig"; sourceTree = "<group>"; };
+		93EC931AE3B08FC39AF4FF5B /* Pods-PeePooPee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeePooPee.release.xcconfig"; path = "Target Support Files/Pods-PeePooPee/Pods-PeePooPee.release.xcconfig"; sourceTree = "<group>"; };
 		A001E3D427B87EF500B47744 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		A001E3D627B87F4400B47744 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		A08410D027B88C6000F13184 /* 17081-pepe-poo-poo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "17081-pepe-poo-poo.json"; sourceTree = "<group>"; };
 		A3939ABE2746904C00412190 /* PeePooPee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeePooPee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3939AC12746904C00412190 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3939ACA2746904E00412190 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -104,6 +116,8 @@
 		A3EAA24E276B5278005F2A4A /* AccessoryBrowserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccessoryBrowserViewController.xib; sourceTree = "<group>"; };
 		A3EAA251276B75F1005F2A4A /* AccessoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryViewController.swift; sourceTree = "<group>"; };
 		A3EAA252276B75F1005F2A4A /* AccessoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccessoryViewController.xib; sourceTree = "<group>"; };
+		BE3AC009C230B32D7159E1F4 /* Pods_PeepooWatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PeepooWatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2F2C0A5D14C938E9BF0BEFD /* Pods_PeepooWatch_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PeepooWatch_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +125,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				288CBC629E36E4932D74DA11 /* Pods_PeepooWatch_WatchKit_Extension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AFD6167996580E04CCB7D5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32E52CD480EF291C63683204 /* Pods_PeepooWatch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3939AD82746906700412190 /* HomeKit.framework in Frameworks */,
+				BAEA079A73A1916B19ECCAF9 /* Pods_PeePooPee.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +168,19 @@
 				1C59A22727B7FC2D00BA1798 /* Info.plist */,
 			);
 			path = "PeepooWatch WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		548A16748775885863D4F639 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				71F2549D6B652DFB49EF565F /* Pods-PeePooPee.debug.xcconfig */,
+				93EC931AE3B08FC39AF4FF5B /* Pods-PeePooPee.release.xcconfig */,
+				3D6E746290CC1865FB243F8B /* Pods-PeepooWatch.debug.xcconfig */,
+				069C5BEDEB5F23F69A51DA3C /* Pods-PeepooWatch.release.xcconfig */,
+				340EFA42EB8E27DF78E77C87 /* Pods-PeepooWatch WatchKit Extension.debug.xcconfig */,
+				2D48C9A197CE4FB8F8F55A9E /* Pods-PeepooWatch WatchKit Extension.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		A001E3D027B87E0E00B47744 /* XIB */ = {
@@ -182,6 +219,7 @@
 		A001E3D327B87E3700B47744 /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				A08410D027B88C6000F13184 /* 17081-pepe-poo-poo.json */,
 			);
 			path = Ressources;
 			sourceTree = "<group>";
@@ -194,6 +232,7 @@
 				1C59A21E27B7FC2B00BA1798 /* PeepooWatch WatchKit Extension */,
 				A3939ABF2746904C00412190 /* Products */,
 				A3939AD62746906700412190 /* Frameworks */,
+				548A16748775885863D4F639 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -227,6 +266,9 @@
 			isa = PBXGroup;
 			children = (
 				A3939AD72746906700412190 /* HomeKit.framework */,
+				23008F6E8189B41A1C2E3CAB /* Pods_PeePooPee.framework */,
+				BE3AC009C230B32D7159E1F4 /* Pods_PeepooWatch.framework */,
+				C2F2C0A5D14C938E9BF0BEFD /* Pods_PeepooWatch_WatchKit_Extension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -238,8 +280,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1C59A22F27B7FC2D00BA1798 /* Build configuration list for PBXNativeTarget "PeepooWatch" */;
 			buildPhases = (
+				647EFD21D26950810E8E48D1 /* [CP] Check Pods Manifest.lock */,
 				1C59A20D27B7FC2A00BA1798 /* Resources */,
 				1C59A22E27B7FC2D00BA1798 /* Embed App Extensions */,
+				9AFD6167996580E04CCB7D5A /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -255,6 +299,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1C59A22B27B7FC2D00BA1798 /* Build configuration list for PBXNativeTarget "PeepooWatch WatchKit Extension" */;
 			buildPhases = (
+				B27848CC3B8024141B1F7DAE /* [CP] Check Pods Manifest.lock */,
 				1C59A21627B7FC2B00BA1798 /* Sources */,
 				1C59A21727B7FC2B00BA1798 /* Frameworks */,
 				1C59A21827B7FC2B00BA1798 /* Resources */,
@@ -272,10 +317,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A3939AD22746904E00412190 /* Build configuration list for PBXNativeTarget "PeePooPee" */;
 			buildPhases = (
+				0F39F681841A8C6DA0D2B4A5 /* [CP] Check Pods Manifest.lock */,
 				A3939ABA2746904C00412190 /* Sources */,
 				A3939ABB2746904C00412190 /* Frameworks */,
 				A3939ABC2746904C00412190 /* Resources */,
 				1C59A1E527B7E90200BA1798 /* Embed Watch Content */,
+				376F65000D8C314B44C1CCB3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -355,12 +402,99 @@
 				A3EAA254276B75F1005F2A4A /* AccessoryViewController.xib in Resources */,
 				A3939ACE2746904E00412190 /* LaunchScreen.storyboard in Resources */,
 				A3939ACB2746904E00412190 /* Assets.xcassets in Resources */,
+				A08410D127B88C6000F13184 /* 17081-pepe-poo-poo.json in Resources */,
 				A3939ADE2746956F00412190 /* StartViewController.xib in Resources */,
 				A3EAA248276B3EDE005F2A4A /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0F39F681841A8C6DA0D2B4A5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PeePooPee-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		376F65000D8C314B44C1CCB3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PeePooPee/Pods-PeePooPee-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PeePooPee/Pods-PeePooPee-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PeePooPee/Pods-PeePooPee-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		647EFD21D26950810E8E48D1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PeepooWatch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B27848CC3B8024141B1F7DAE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PeepooWatch WatchKit Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1C59A21627B7FC2B00BA1798 /* Sources */ = {
@@ -425,6 +559,7 @@
 /* Begin XCBuildConfiguration section */
 		1C59A22C27B7FC2D00BA1798 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 340EFA42EB8E27DF78E77C87 /* Pods-PeepooWatch WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
@@ -456,6 +591,7 @@
 		};
 		1C59A22D27B7FC2D00BA1798 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D48C9A197CE4FB8F8F55A9E /* Pods-PeepooWatch WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
@@ -487,6 +623,7 @@
 		};
 		1C59A23027B7FC2D00BA1798 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D6E746290CC1865FB243F8B /* Pods-PeepooWatch.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -515,6 +652,7 @@
 		};
 		1C59A23127B7FC2D00BA1798 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 069C5BEDEB5F23F69A51DA3C /* Pods-PeepooWatch.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -659,6 +797,7 @@
 		};
 		A3939AD32746904E00412190 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71F2549D6B652DFB49EF565F /* Pods-PeePooPee.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -688,6 +827,7 @@
 		};
 		A3939AD42746904E00412190 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93EC931AE3B08FC39AF4FF5B /* Pods-PeePooPee.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

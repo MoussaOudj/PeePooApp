@@ -21,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3tb-DP-M9x">
-                    <rect key="frame" x="60" y="44" width="294" height="818"/>
+                    <rect key="frame" x="60" y="74" width="294" height="686"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <color key="sectionIndexBackgroundColor" systemColor="systemTealColor"/>
                 </tableView>
@@ -29,10 +29,10 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemTealColor"/>
             <constraints>
-                <constraint firstItem="3tb-DP-M9x" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="WUd-os-RPB"/>
-                <constraint firstItem="3tb-DP-M9x" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="aAz-UX-075"/>
-                <constraint firstItem="3tb-DP-M9x" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="60" id="mEf-t1-dMY"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3tb-DP-M9x" secondAttribute="trailing" constant="60" id="mzl-yX-EO7"/>
+                <constraint firstItem="3tb-DP-M9x" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="60" id="JiM-yB-0Up"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3tb-DP-M9x" secondAttribute="trailing" constant="60" id="Oao-bz-hPs"/>
+                <constraint firstItem="3tb-DP-M9x" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="aee-kg-eau"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="3tb-DP-M9x" secondAttribute="bottom" constant="102" id="w3V-6n-tnv"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="66.964285714285708"/>
         </view>

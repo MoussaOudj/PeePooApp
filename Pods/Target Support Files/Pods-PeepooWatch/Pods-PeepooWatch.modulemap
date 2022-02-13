@@ -1,0 +1,6 @@
+framework module Pods_PeepooWatch {
+  umbrella header "Pods-PeepooWatch-umbrella.h"
+
+  export *
+  module * { export * }
+}

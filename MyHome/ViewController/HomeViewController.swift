@@ -48,7 +48,7 @@ class HomeViewController: UIViewController {
         let addRoomButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(handleAddRoom))
         self.navigationItem.rightBarButtonItem = addRoomButton
         self.navigationItem.hidesBackButton = true
-        self.title = "Choose a room"
+        self.title = "Select a room"
     }
     
     override func viewDidAppear(_ animated: Bool) {
