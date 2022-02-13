@@ -30,8 +30,6 @@ class AccessoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
         if WCSession.isSupported() {
             let wcsession = WCSession.default
             wcsession.delegate = self
@@ -40,7 +38,6 @@ class AccessoryViewController: UIViewController {
         
         let session = WCSession.default
         print("session reachable ? : \(session.isReachable)")
-        
         
         self.accessories = self.room.accessories
         Timer.scheduledTimer(withTimeInterval: 2, repeats: true) { _ in

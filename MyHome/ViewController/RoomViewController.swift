@@ -9,7 +9,6 @@ import UIKit
 import HomeKit
 
 class RoomViewController: UIViewController {
-    
     var home: HMHome!
     var room: HMRoom!
     @IBOutlet var accessoryTableView: UITableView!
@@ -27,6 +26,12 @@ class RoomViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = addAccessoryButton
         self.accessoryTableView.delegate =  self
         self.accessoryTableView.dataSource = self
+        configureComponents()
+    }
+    
+    func configureComponents() {
+        self.view.setGradientBackground()
+        self.accessoryTableView.backgroundColor = .clear
     }
     
     @objc func handleAddAccessory() {
@@ -60,11 +65,20 @@ extension RoomViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: RoomViewController.accessoryCellId) ?? UITableViewCell(style: .default, reuseIdentifier: RoomViewController.accessoryCellId)
         let accessory = self.room.accessories[indexPath.row]
-        cell.textLabel?.text = "\(accessory.name)"
+        if accessory.name.contains("PeePooPee") {
+            cell.textLabel?.text = "\(accessory.name)"
+        }
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.room.accessories.count
+        var numberOfPeepoopee: Int = 0
+        for accessory in self.room.accessories {
+            if accessory.name.contains("PeePooPee") {
+                numberOfPeepoopee += 1
+            }
+        }
+        return numberOfPeepoopee
     }
 }
