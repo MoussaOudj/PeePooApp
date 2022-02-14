@@ -15,6 +15,7 @@ class AccessoryViewController: UIViewController {
     var room: HMRoom!
     var accessories: [HMAccessory] = []
     @IBOutlet weak var seatCoverInput: UISwitch!
+    @IBOutlet weak var fanInput: UISwitch!
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var motionLabel: UILabel!
     var accessory: HMAccessory!
@@ -44,6 +45,7 @@ class AccessoryViewController: UIViewController {
             self.updateTemp()
             self.updateMotion()
             self.updateCurrentDoorState()
+            self.updateFanState()
         }
     }
     
@@ -85,6 +87,20 @@ class AccessoryViewController: UIViewController {
         }
         return nil
     }
+    
+    
+    func getFanCharacteristic() -> HMCharacteristic? {
+            for accessory in self.accessories {
+                for service in accessory.services {
+                    for characteristic in service.characteristics {
+                        if characteristic.characteristicType == HMCharacteristicTypeActive {
+                            return characteristic
+                        }
+                    }
+                }
+            }
+            return nil
+        }
     
     func getTargetSeatCoverCharacteristic() -> HMCharacteristic? {
         for accessory in self.accessories {
@@ -170,6 +186,30 @@ class AccessoryViewController: UIViewController {
         }
     }
     
+    func updateFanState() {
+            guard let characteristicFan = self.getFanCharacteristic() else {
+                print("no fan characteristics")
+                return
+            }
+            characteristicFan.readValue { err in
+                guard err == nil else {
+                    self.fanInput.isOn = false
+                    return
+                }
+                guard let isOn = characteristicFan.value as? Bool else {
+                    self.fanInput.isOn = false
+                    return
+                }
+                
+    //            if (WCSession.default.isReachable) {
+    //                let message = ["isOn": isOn]
+    //                WCSession.default.sendMessage(message, replyHandler: nil)
+    //            }
+                print("fan isOn : \(isOn)")
+                self.fanInput.isOn = isOn
+            }
+        }
+    
     @IBAction func onSwitch(_ sender: UISwitch) {
         guard let characteristicTargetSeatCover = self.getTargetSeatCoverCharacteristic() else {
             print("no target seat characteristics")
@@ -181,6 +221,20 @@ class AccessoryViewController: UIViewController {
         }
         
     }
+    
+    @IBAction func onFanInputSwitch(_ sender: UISwitch) {
+        
+        guard let characteristicTargetSeatCover = self.getFanCharacteristic() else {
+                    print("no target seat characteristics")
+                    return
+                }
+                
+                characteristicTargetSeatCover.writeValue(sender.isOn) { err in
+                    return
+                }
+        
+    }
+    
     
 }
 

@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AccessoryViewController" customModule="MyHome" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AccessoryViewController" customModule="PeePooPee" customModuleProvider="target">
             <connections>
+                <outlet property="fanInput" destination="dER-NV-LKF" id="jzR-ge-Q9M"/>
                 <outlet property="motionLabel" destination="n2p-VT-pc2" id="OW8-av-9De"/>
                 <outlet property="seatCoverInput" destination="tpy-GR-uGA" id="Ukk-wj-axS"/>
                 <outlet property="tempLabel" destination="le6-pa-Cni" id="uU1-KE-SRI"/>
@@ -23,7 +24,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BcP-xG-fJs">
-                    <rect key="frame" x="180.5" y="412" width="53" height="72"/>
+                    <rect key="frame" x="180.5" y="396.5" width="53" height="103"/>
                     <subviews>
                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tpy-GR-uGA">
                             <rect key="frame" x="2" y="0.0" width="51" height="31"/>
@@ -31,14 +32,20 @@
                                 <action selector="onSwitch:" destination="-1" eventType="valueChanged" id="YpL-0G-eCz"/>
                             </connections>
                         </switch>
+                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dER-NV-LKF">
+                            <rect key="frame" x="2" y="31" width="51" height="31"/>
+                            <connections>
+                                <action selector="onFanInputSwitch:" destination="-1" eventType="valueChanged" id="D4h-bU-KMl"/>
+                            </connections>
+                        </switch>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Temp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="le6-pa-Cni">
-                            <rect key="frame" x="5.5" y="31" width="42.5" height="20.5"/>
+                            <rect key="frame" x="5.5" y="62" width="42.5" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Motion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n2p-VT-pc2">
-                            <rect key="frame" x="0.0" y="51.5" width="53" height="20.5"/>
+                            <rect key="frame" x="0.0" y="82.5" width="53" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
