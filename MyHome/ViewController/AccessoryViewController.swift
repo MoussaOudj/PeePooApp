@@ -8,6 +8,7 @@
 import UIKit
 import HomeKit
 import WatchConnectivity
+import Lottie
 
 class AccessoryViewController: UIViewController {
     var home: HMHome!
@@ -16,7 +17,17 @@ class AccessoryViewController: UIViewController {
     @IBOutlet weak var seatCoverInput: UISwitch!
     @IBOutlet weak var fanInput: UISwitch!
     @IBOutlet weak var tempLabel: UILabel!
+    @IBOutlet weak var fanView: UIView!
+    @IBOutlet weak var fanLabel: UILabel!
+    @IBOutlet weak var seatView: UIView!
+    @IBOutlet weak var seatAnimation: AnimationView!
+    @IBOutlet weak var seatLabel: UILabel!
+    @IBOutlet weak var fanAnimation: AnimationView!
+    @IBOutlet weak var tempView: UIView!
+    @IBOutlet weak var motionView: UIView!
     @IBOutlet weak var motionLabel: UILabel!
+    
+    
     
     var accessory: HMAccessory!
     
@@ -47,13 +58,51 @@ class AccessoryViewController: UIViewController {
             self.updateCurrentDoorState()
             self.updateFanState()
         }
-        
         configureComponents()
+        configureFanAnimation(isOn: false)
+        configureSeatAnimation(isOn: false)
     }
     
     func configureComponents() {
         view.setGradientBackground()
+        seatView.layer.cornerRadius = 20
+        seatView.backgroundColor = .white
+        seatLabel.textColor = .orange
         
+        fanView.layer.cornerRadius = 20
+        fanView.backgroundColor = .white
+        fanLabel.textColor = .orange
+        
+        tempView.layer.cornerRadius = 20
+        tempView.backgroundColor = .white
+        tempLabel.textColor = .orange
+        
+        motionView.layer.cornerRadius = 20
+        motionView.backgroundColor = .white
+        motionLabel.textColor = .orange
+    }
+    
+    
+    func configureFanAnimation(isOn: Bool) {
+            fanAnimation.backgroundColor = .clear
+            fanAnimation!.frame = view.bounds
+            fanAnimation!.contentMode = .scaleAspectFit
+            fanAnimation!.loopMode = .loop
+            fanAnimation!.animationSpeed = 0.5
+        if isOn {
+            fanAnimation!.play()
+        }
+    }
+    
+    func configureSeatAnimation(isOn: Bool) {
+        seatAnimation.backgroundColor = .clear
+        seatAnimation!.frame = view.bounds
+        seatAnimation!.contentMode = .scaleAspectFit
+        seatAnimation!.loopMode = .loop
+        seatAnimation!.animationSpeed = 0.5
+        if isOn {
+            seatAnimation!.play()
+        }
     }
     
     func getTempCharacteristic() -> HMCharacteristic? {
@@ -130,7 +179,7 @@ class AccessoryViewController: UIViewController {
         
         characteristicCurrentTemp.readValue { err in
             guard err == nil else {
-                self.tempLabel.text = "Erreur capteur temp"
+                self.tempLabel.text = "Error Tempature"
                 return
             }
             guard let temp = characteristicCurrentTemp.value as? Double else {
@@ -142,8 +191,6 @@ class AccessoryViewController: UIViewController {
                 let message = ["temp": "\(temp)"]
                 WCSession.default.sendMessage(message, replyHandler: nil)
             }
-            
-            self.tempLabel.textColor = .black
             self.tempLabel.text = "\(temp)°C"
         }
     }
@@ -155,7 +202,7 @@ class AccessoryViewController: UIViewController {
         }
         characteristicMotion.readValue { err in
             guard err == nil else {
-                self.motionLabel.text = "Erreur capteur motion"
+                self.motionLabel.text = "Error motion data"
                 return
             }
             guard let isSitting = characteristicMotion.value as? Bool else {
@@ -168,12 +215,10 @@ class AccessoryViewController: UIViewController {
                 WCSession.default.sendMessage(message, replyHandler: nil)
             }
             
-            self.motionLabel.textColor = .black
-            
             if isSitting {
-                self.motionLabel.text = "The throne is used"
+                self.motionLabel.text = "Occupied ⛔️"
             } else {
-                self.motionLabel.text = "Free to use 🧻"
+                self.motionLabel.text = "Vacant ✅"
             }
         }
     }
@@ -217,6 +262,8 @@ class AccessoryViewController: UIViewController {
             }
             print("fan isOn : \(isOn)")
             self.fanInput.isOn = isOn
+            self.configureFanAnimation(isOn: isOn)
+            
         }
     }
     
@@ -265,6 +312,7 @@ extension AccessoryViewController: WCSessionDelegate {
         DispatchQueue.main.async {
             self.seatCoverInput.isOn = isOn
             self.onSwitch(self.seatCoverInput)
+            self.configureSeatAnimation(isOn: isOn)
         }
     }
 }
