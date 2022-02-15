@@ -19,6 +19,9 @@
 		32E52CD480EF291C63683204 /* Pods_PeepooWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE3AC009C230B32D7159E1F4 /* Pods_PeepooWatch.framework */; };
 		A001E3D527B87EF500B47744 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A001E3D427B87EF500B47744 /* UIView+Extension.swift */; };
 		A001E3D727B87F4400B47744 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A001E3D627B87F4400B47744 /* UIButton+Extension.swift */; };
+		A055573D27BB206C00AA33C6 /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A055573C27BB206C00AA33C6 /* UIStackView+Extension.swift */; };
+		A055573F27BC36A900AA33C6 /* 41894-toilet.json in Resources */ = {isa = PBXBuildFile; fileRef = A055573E27BC36A900AA33C6 /* 41894-toilet.json */; };
+		A055574127BC4ADB00AA33C6 /* 85584-curved-fan-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = A055574027BC4ADB00AA33C6 /* 85584-curved-fan-animation.json */; };
 		A08410D127B88C6000F13184 /* 17081-pepe-poo-poo.json in Resources */ = {isa = PBXBuildFile; fileRef = A08410D027B88C6000F13184 /* 17081-pepe-poo-poo.json */; };
 		A3939AC22746904C00412190 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3939AC12746904C00412190 /* AppDelegate.swift */; };
 		A3939ACB2746904E00412190 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3939ACA2746904E00412190 /* Assets.xcassets */; };
@@ -98,6 +101,9 @@
 		93EC931AE3B08FC39AF4FF5B /* Pods-PeePooPee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeePooPee.release.xcconfig"; path = "Target Support Files/Pods-PeePooPee/Pods-PeePooPee.release.xcconfig"; sourceTree = "<group>"; };
 		A001E3D427B87EF500B47744 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		A001E3D627B87F4400B47744 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		A055573C27BB206C00AA33C6 /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
+		A055573E27BC36A900AA33C6 /* 41894-toilet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "41894-toilet.json"; sourceTree = "<group>"; };
+		A055574027BC4ADB00AA33C6 /* 85584-curved-fan-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "85584-curved-fan-animation.json"; sourceTree = "<group>"; };
 		A08410D027B88C6000F13184 /* 17081-pepe-poo-poo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "17081-pepe-poo-poo.json"; sourceTree = "<group>"; };
 		A3939ABE2746904C00412190 /* PeePooPee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeePooPee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3939AC12746904C00412190 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -212,6 +218,7 @@
 			children = (
 				A001E3D427B87EF500B47744 /* UIView+Extension.swift */,
 				A001E3D627B87F4400B47744 /* UIButton+Extension.swift */,
+				A055573C27BB206C00AA33C6 /* UIStackView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -220,6 +227,8 @@
 			isa = PBXGroup;
 			children = (
 				A08410D027B88C6000F13184 /* 17081-pepe-poo-poo.json */,
+				A055574027BC4ADB00AA33C6 /* 85584-curved-fan-animation.json */,
+				A055573E27BC36A900AA33C6 /* 41894-toilet.json */,
 			);
 			path = Ressources;
 			sourceTree = "<group>";
@@ -400,10 +409,12 @@
 				A3EAA250276B5278005F2A4A /* AccessoryBrowserViewController.xib in Resources */,
 				A3EAA24C276B5078005F2A4A /* RoomViewController.xib in Resources */,
 				A3EAA254276B75F1005F2A4A /* AccessoryViewController.xib in Resources */,
+				A055573F27BC36A900AA33C6 /* 41894-toilet.json in Resources */,
 				A3939ACE2746904E00412190 /* LaunchScreen.storyboard in Resources */,
 				A3939ACB2746904E00412190 /* Assets.xcassets in Resources */,
 				A08410D127B88C6000F13184 /* 17081-pepe-poo-poo.json in Resources */,
 				A3939ADE2746956F00412190 /* StartViewController.xib in Resources */,
+				A055574127BC4ADB00AA33C6 /* 85584-curved-fan-animation.json in Resources */,
 				A3EAA248276B3EDE005F2A4A /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -516,6 +527,7 @@
 				A3939ADD2746956F00412190 /* StartViewController.swift in Sources */,
 				A3EAA247276B3EDE005F2A4A /* HomeViewController.swift in Sources */,
 				A3EAA24F276B5278005F2A4A /* AccessoryBrowserViewController.swift in Sources */,
+				A055573D27BB206C00AA33C6 /* UIStackView+Extension.swift in Sources */,
 				A001E3D727B87F4400B47744 /* UIButton+Extension.swift in Sources */,
 				A3EAA24B276B5078005F2A4A /* RoomViewController.swift in Sources */,
 				A3EAA253276B75F1005F2A4A /* AccessoryViewController.swift in Sources */,
@@ -810,6 +822,7 @@
 				INFOPLIST_KEY_NSHomeKitUsageDescription = "PeePooPee souhaite accèder aux informations de votre maison";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -840,6 +853,7 @@
 				INFOPLIST_KEY_NSHomeKitUsageDescription = "PeePooPee souhaite accèder aux informations de votre maison";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
