@@ -17,7 +17,6 @@ class AccessoryViewController: UIViewController {
     @IBOutlet weak var fanInput: UISwitch!
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var motionLabel: UILabel!
-    @IBOutlet weak var mainStackView: UIStackView!
     
     var accessory: HMAccessory!
     
@@ -54,7 +53,6 @@ class AccessoryViewController: UIViewController {
     
     func configureComponents() {
         view.setGradientBackground()
-        mainStackView.customize(backgroundColor: .white, radiusSize: 7)
         
     }
     
@@ -145,14 +143,8 @@ class AccessoryViewController: UIViewController {
                 WCSession.default.sendMessage(message, replyHandler: nil)
             }
             
-            if temp < 15 {
-                self.tempLabel.text = "\(temp)°C, hope you won't freeze 🥶"
-            } else if temp > 40 {
-                self.tempLabel.text = "\(temp)°C, maybe it'll burn 🥵!"
-            } else {
-                self.tempLabel.text = "\(temp)°C, you can chill in peace 🍑"
-            }
-            
+            self.tempLabel.textColor = .black
+            self.tempLabel.text = "\(temp)°C"
         }
     }
     
@@ -176,10 +168,12 @@ class AccessoryViewController: UIViewController {
                 WCSession.default.sendMessage(message, replyHandler: nil)
             }
             
+            self.motionLabel.textColor = .black
+            
             if isSitting {
-                self.motionLabel.text = "Sorry, wait your turn"
+                self.motionLabel.text = "The throne is used"
             } else {
-                self.motionLabel.text = "Run! Faaaast"
+                self.motionLabel.text = "Free to use 🧻"
             }
         }
     }
