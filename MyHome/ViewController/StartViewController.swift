@@ -36,7 +36,7 @@ class StartViewController: UIViewController {
     
     func configureComponents() {
         view.setGradientBackground()
-        startButton.setUpRoundedButton(title: "Start Peepoopee")
+        startButton.setUpRoundedButton(title: "START")
         pepeAnimation.backgroundColor = .clear
         pepeAnimation!.frame = view.bounds
         pepeAnimation!.contentMode = .scaleAspectFit

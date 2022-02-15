@@ -22,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4m9-Z0-xRr">
-                    <rect key="frame" x="50" y="612" width="314" height="50"/>
+                    <rect key="frame" x="50" y="762" width="314" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="gGf-nI-mQp"/>
                     </constraints>
@@ -35,27 +35,54 @@
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ztv-3P-UzM" customClass="AnimationView" customModule="Lottie">
-                    <rect key="frame" x="10" y="74" width="394" height="488"/>
+                    <rect key="frame" x="10" y="74" width="394" height="379"/>
+                    <color key="backgroundColor" systemColor="systemBlueColor"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="17081-pepe-poo-poo"/>
                     </userDefinedRuntimeAttributes>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to the our assistant app. You can manage your device through your app." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FVP-ph-FXh">
+                    <rect key="frame" x="20" y="607" width="374" height="41"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGP-Bx-9Kz">
+                    <rect key="frame" x="57" y="539" width="300" height="42"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="Dej-JE-MHP"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="35"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBrownColor"/>
             <constraints>
-                <constraint firstItem="4m9-Z0-xRr" firstAttribute="top" secondItem="ztv-3P-UzM" secondAttribute="bottom" constant="50" id="42Y-IZ-7mA"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4m9-Z0-xRr" secondAttribute="trailing" constant="50" id="6Ff-kh-N5x"/>
                 <constraint firstItem="ztv-3P-UzM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="7sR-tP-Wnb"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ztv-3P-UzM" secondAttribute="trailing" constant="10" id="DLf-rz-1Oq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="FVP-ph-FXh" secondAttribute="trailing" constant="20" id="HtK-zg-uUG"/>
+                <constraint firstItem="FVP-ph-FXh" firstAttribute="top" secondItem="wGP-Bx-9Kz" secondAttribute="bottom" constant="26" id="JcY-kU-NrW"/>
                 <constraint firstItem="ztv-3P-UzM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="K0T-mQ-36b"/>
+                <constraint firstAttribute="bottom" secondItem="wGP-Bx-9Kz" secondAttribute="bottom" constant="315" id="Lhw-yZ-j1p"/>
                 <constraint firstItem="4m9-Z0-xRr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="Vq5-a1-NPh"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="4m9-Z0-xRr" secondAttribute="bottom" constant="200" id="oVE-Lt-lgY"/>
+                <constraint firstItem="FVP-ph-FXh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="WfC-76-yom"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="4m9-Z0-xRr" secondAttribute="bottom" constant="50" id="oVE-Lt-lgY"/>
+                <constraint firstItem="wGP-Bx-9Kz" firstAttribute="centerX" secondItem="FVP-ph-FXh" secondAttribute="centerX" id="oeT-Xc-ZlN"/>
+                <constraint firstItem="wGP-Bx-9Kz" firstAttribute="top" secondItem="ztv-3P-UzM" secondAttribute="bottom" constant="86" id="qRs-am-ILq"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="67"/>
+            <point key="canvasLocation" x="137.68115942028987" y="66.964285714285708"/>
         </view>
     </objects>
+    <designables>
+        <designable name="ztv-3P-UzM"/>
+    </designables>
     <resources>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBrownColor">
             <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
