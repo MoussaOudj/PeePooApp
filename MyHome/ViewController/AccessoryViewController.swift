@@ -26,8 +26,7 @@ class AccessoryViewController: UIViewController {
     @IBOutlet weak var tempView: UIView!
     @IBOutlet weak var motionView: UIView!
     @IBOutlet weak var motionLabel: UILabel!
-    
-    
+    @IBOutlet weak var seatOpenAnimationView: AnimationView!
     
     var accessory: HMAccessory!
     
@@ -59,8 +58,8 @@ class AccessoryViewController: UIViewController {
             self.updateFanState()
         }
         configureComponents()
-        configureFanAnimation(isOn: false)
-        configureSeatAnimation(isOn: false)
+        configureFanAnimation(isOn: fanInput.isOn)
+        configureSeatAnimation()
     }
     
     func configureComponents() {
@@ -80,29 +79,39 @@ class AccessoryViewController: UIViewController {
         motionView.layer.cornerRadius = 20
         motionView.backgroundColor = .white
         motionLabel.textColor = .orange
+        
+        seatOpenAnimationView.isHidden = true
     }
-    
     
     func configureFanAnimation(isOn: Bool) {
-            fanAnimation.backgroundColor = .clear
-            fanAnimation!.frame = view.bounds
-            fanAnimation!.contentMode = .scaleAspectFit
-            fanAnimation!.loopMode = .loop
-            fanAnimation!.animationSpeed = 0.5
-        if isOn {
+        fanAnimation.backgroundColor = .clear
+        fanAnimation!.frame = view.bounds
+        fanAnimation!.contentMode = .scaleAspectFit
+        fanAnimation!.loopMode = .loop
+        if fanInput.isOn {
             fanAnimation!.play()
         }
+        fanAnimation!.animationSpeed = 0.5
+        let keypath = AnimationKeypath(keys: ["**", "Fill", "**", "Color"])
+        let colorProvider = ColorValueProvider(UIColor.orange.lottieColorValue)
+        fanAnimation.setValueProvider(colorProvider, keypath: keypath)
     }
     
-    func configureSeatAnimation(isOn: Bool) {
+    func configureSeatAnimation() {
         seatAnimation.backgroundColor = .clear
         seatAnimation!.frame = view.bounds
-        seatAnimation!.contentMode = .scaleAspectFit
-        seatAnimation!.loopMode = .loop
+        seatAnimation!.contentMode = .scaleAspectFill
+        seatAnimation!.loopMode = .playOnce
         seatAnimation!.animationSpeed = 0.5
-        if isOn {
-            seatAnimation!.play()
-        }
+        seatAnimation!.play()
+        
+        seatOpenAnimationView.backgroundColor = .clear
+        seatOpenAnimationView!.frame = view.bounds
+        seatOpenAnimationView!.contentMode = .scaleAspectFill
+        seatOpenAnimationView!.loopMode = .playOnce
+        seatOpenAnimationView!.animationSpeed = 0.5
+        seatOpenAnimationView!.play()
+
     }
     
     func getTempCharacteristic() -> HMCharacteristic? {
@@ -243,6 +252,8 @@ class AccessoryViewController: UIViewController {
                 WCSession.default.sendMessage(message, replyHandler: nil)
             }
             self.seatCoverInput.isOn = isOn
+            self.seatAnimation.isHidden = isOn
+            self.seatOpenAnimationView.isHidden = !isOn
         }
     }
     
@@ -262,8 +273,11 @@ class AccessoryViewController: UIViewController {
             }
             print("fan isOn : \(isOn)")
             self.fanInput.isOn = isOn
-            self.configureFanAnimation(isOn: isOn)
             
+            self.configureFanAnimation(isOn: isOn)
+            if self.fanInput.isOn == false {
+                self.fanAnimation.pause()
+            }
         }
     }
     
@@ -312,7 +326,6 @@ extension AccessoryViewController: WCSessionDelegate {
         DispatchQueue.main.async {
             self.seatCoverInput.isOn = isOn
             self.onSwitch(self.seatCoverInput)
-            self.configureSeatAnimation(isOn: isOn)
         }
     }
 }

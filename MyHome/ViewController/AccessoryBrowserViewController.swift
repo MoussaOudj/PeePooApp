@@ -33,6 +33,7 @@ class AccessoryBrowserViewController: UIViewController {
         super.viewDidLoad()
         self.accessoryTableView.delegate = self
         self.accessoryTableView.dataSource = self
+        self.accessoryTableView.backgroundColor = .clear
         self.accessoryBrowser = HMAccessoryBrowser()
         self.accessoryBrowser.delegate = self
         self.accessoryBrowser.startSearchingForNewAccessories()
@@ -63,7 +64,6 @@ extension AccessoryBrowserViewController: UITableViewDelegate {
 }
 
 extension AccessoryBrowserViewController: UITableViewDataSource {
-    
     static let accessoryCellId =  "acid"
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

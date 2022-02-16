@@ -20,8 +20,9 @@
 		A001E3D527B87EF500B47744 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A001E3D427B87EF500B47744 /* UIView+Extension.swift */; };
 		A001E3D727B87F4400B47744 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A001E3D627B87F4400B47744 /* UIButton+Extension.swift */; };
 		A055573D27BB206C00AA33C6 /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A055573C27BB206C00AA33C6 /* UIStackView+Extension.swift */; };
-		A055573F27BC36A900AA33C6 /* 41894-toilet.json in Resources */ = {isa = PBXBuildFile; fileRef = A055573E27BC36A900AA33C6 /* 41894-toilet.json */; };
 		A055574127BC4ADB00AA33C6 /* 85584-curved-fan-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = A055574027BC4ADB00AA33C6 /* 85584-curved-fan-animation.json */; };
+		A055574327BD20EA00AA33C6 /* 51661-closed-tag.json in Resources */ = {isa = PBXBuildFile; fileRef = A055574227BD20EA00AA33C6 /* 51661-closed-tag.json */; };
+		A055574727BD21C700AA33C6 /* 51660-open.json in Resources */ = {isa = PBXBuildFile; fileRef = A055574627BD21C700AA33C6 /* 51660-open.json */; };
 		A08410D127B88C6000F13184 /* 17081-pepe-poo-poo.json in Resources */ = {isa = PBXBuildFile; fileRef = A08410D027B88C6000F13184 /* 17081-pepe-poo-poo.json */; };
 		A3939AC22746904C00412190 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3939AC12746904C00412190 /* AppDelegate.swift */; };
 		A3939ACB2746904E00412190 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3939ACA2746904E00412190 /* Assets.xcassets */; };
@@ -102,8 +103,9 @@
 		A001E3D427B87EF500B47744 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		A001E3D627B87F4400B47744 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		A055573C27BB206C00AA33C6 /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
-		A055573E27BC36A900AA33C6 /* 41894-toilet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "41894-toilet.json"; sourceTree = "<group>"; };
 		A055574027BC4ADB00AA33C6 /* 85584-curved-fan-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "85584-curved-fan-animation.json"; sourceTree = "<group>"; };
+		A055574227BD20EA00AA33C6 /* 51661-closed-tag.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "51661-closed-tag.json"; sourceTree = "<group>"; };
+		A055574627BD21C700AA33C6 /* 51660-open.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "51660-open.json"; sourceTree = "<group>"; };
 		A08410D027B88C6000F13184 /* 17081-pepe-poo-poo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "17081-pepe-poo-poo.json"; sourceTree = "<group>"; };
 		A3939ABE2746904C00412190 /* PeePooPee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeePooPee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3939AC12746904C00412190 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -227,8 +229,9 @@
 			isa = PBXGroup;
 			children = (
 				A08410D027B88C6000F13184 /* 17081-pepe-poo-poo.json */,
+				A055574227BD20EA00AA33C6 /* 51661-closed-tag.json */,
+				A055574627BD21C700AA33C6 /* 51660-open.json */,
 				A055574027BC4ADB00AA33C6 /* 85584-curved-fan-animation.json */,
-				A055573E27BC36A900AA33C6 /* 41894-toilet.json */,
 			);
 			path = Ressources;
 			sourceTree = "<group>";
@@ -408,11 +411,12 @@
 			files = (
 				A3EAA250276B5278005F2A4A /* AccessoryBrowserViewController.xib in Resources */,
 				A3EAA24C276B5078005F2A4A /* RoomViewController.xib in Resources */,
+				A055574727BD21C700AA33C6 /* 51660-open.json in Resources */,
 				A3EAA254276B75F1005F2A4A /* AccessoryViewController.xib in Resources */,
-				A055573F27BC36A900AA33C6 /* 41894-toilet.json in Resources */,
 				A3939ACE2746904E00412190 /* LaunchScreen.storyboard in Resources */,
 				A3939ACB2746904E00412190 /* Assets.xcassets in Resources */,
 				A08410D127B88C6000F13184 /* 17081-pepe-poo-poo.json in Resources */,
+				A055574327BD20EA00AA33C6 /* 51661-closed-tag.json in Resources */,
 				A3939ADE2746956F00412190 /* StartViewController.xib in Resources */,
 				A055574127BC4ADB00AA33C6 /* 85584-curved-fan-animation.json in Resources */,
 				A3EAA248276B3EDE005F2A4A /* HomeViewController.xib in Resources */,

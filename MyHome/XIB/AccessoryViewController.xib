@@ -20,6 +20,7 @@
                 <outlet property="seatAnimation" destination="mC0-gi-9Fb" id="W3p-eb-FFt"/>
                 <outlet property="seatCoverInput" destination="tpy-GR-uGA" id="Ukk-wj-axS"/>
                 <outlet property="seatLabel" destination="GBh-0H-p2x" id="eWG-47-Ni7"/>
+                <outlet property="seatOpenAnimationView" destination="8Gg-ae-Rsk" id="AXe-GO-upx"/>
                 <outlet property="seatView" destination="N4e-KA-9ct" id="OI5-ex-YQ2"/>
                 <outlet property="tempLabel" destination="le6-pa-Cni" id="uU1-KE-SRI"/>
                 <outlet property="tempView" destination="DL8-xa-Eqv" id="mX1-gn-w6A"/>
@@ -52,21 +53,35 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Gg-ae-Rsk" customClass="AnimationView" customModule="Lottie">
+                            <rect key="frame" x="15" y="61" width="150" height="108"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="108" id="RQz-OP-ccT"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="51660-open"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mC0-gi-9Fb" customClass="AnimationView" customModule="Lottie">
                             <rect key="frame" x="15" y="61" width="150" height="108"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="41894-toilet"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="51661-closed-tag"/>
                             </userDefinedRuntimeAttributes>
                         </view>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemOrangeColor"/>
                     <constraints>
+                        <constraint firstItem="8Gg-ae-Rsk" firstAttribute="leading" secondItem="mC0-gi-9Fb" secondAttribute="leading" id="2yY-eo-qU0"/>
                         <constraint firstAttribute="trailing" secondItem="tpy-GR-uGA" secondAttribute="trailing" constant="10" id="Dif-KA-ok0"/>
                         <constraint firstAttribute="bottom" secondItem="mC0-gi-9Fb" secondAttribute="bottom" constant="5" id="Icf-RS-5kR"/>
                         <constraint firstAttribute="trailing" secondItem="mC0-gi-9Fb" secondAttribute="trailing" constant="15" id="Nq0-Qy-OVb"/>
+                        <constraint firstItem="tpy-GR-uGA" firstAttribute="leading" secondItem="8Gg-ae-Rsk" secondAttribute="trailing" constant="-44" id="Pdo-Cu-9Lc"/>
                         <constraint firstItem="GBh-0H-p2x" firstAttribute="centerY" secondItem="tpy-GR-uGA" secondAttribute="centerY" id="Tzg-W9-EjE"/>
+                        <constraint firstAttribute="bottom" secondItem="8Gg-ae-Rsk" secondAttribute="bottom" constant="5" id="e1q-gQ-A9d"/>
                         <constraint firstItem="mC0-gi-9Fb" firstAttribute="leading" secondItem="N4e-KA-9ct" secondAttribute="leading" constant="15" id="e9g-wD-xLA"/>
+                        <constraint firstItem="8Gg-ae-Rsk" firstAttribute="trailing" secondItem="mC0-gi-9Fb" secondAttribute="trailing" id="eQc-wg-hUp"/>
                         <constraint firstAttribute="width" secondItem="N4e-KA-9ct" secondAttribute="height" multiplier="30:29" id="ehf-ci-5jf"/>
                         <constraint firstItem="mC0-gi-9Fb" firstAttribute="top" secondItem="tpy-GR-uGA" secondAttribute="bottom" constant="20" id="lSW-iM-vfj"/>
                         <constraint firstItem="GBh-0H-p2x" firstAttribute="leading" secondItem="N4e-KA-9ct" secondAttribute="leading" constant="8" id="lvl-dh-LVD"/>
@@ -132,9 +147,9 @@
                     <rect key="frame" x="20" y="460" width="180" height="174"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Temp" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="le6-pa-Cni">
-                            <rect key="frame" x="67.5" y="77" width="45" height="20.5"/>
+                            <rect key="frame" x="51.5" y="69" width="77" height="36"/>
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -171,6 +186,7 @@
         </view>
     </objects>
     <designables>
+        <designable name="8Gg-ae-Rsk"/>
         <designable name="jgb-IT-UTk"/>
     </designables>
     <resources>
