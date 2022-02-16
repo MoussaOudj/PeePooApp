@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AccessoryViewController" customModule="PeePooPee" customModuleProvider="target">
             <connections>
+                <outlet property="barChartView" destination="sRL-HP-vn8" id="bkk-th-iBE"/>
                 <outlet property="fanAnimation" destination="jgb-IT-UTk" id="Qhb-rH-gOM"/>
                 <outlet property="fanInput" destination="dER-NV-LKF" id="jzR-ge-Q9M"/>
                 <outlet property="fanLabel" destination="GMV-gd-UI5" id="FNw-3g-WoE"/>
@@ -161,13 +162,19 @@
                         <constraint firstAttribute="width" secondItem="DL8-xa-Eqv" secondAttribute="height" multiplier="30:29" id="lOf-ey-XH4"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sRL-HP-vn8" customClass="BarChartView" customModule="Charts">
+                    <rect key="frame" x="10" y="639" width="394" height="223"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="HQH-V4-8w1" secondAttribute="bottom" constant="228" id="4Xv-7C-x2p"/>
                 <constraint firstItem="N4e-KA-9ct" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="BX8-nd-tFb"/>
+                <constraint firstItem="sRL-HP-vn8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="JHJ-zl-1X4"/>
                 <constraint firstItem="N4e-KA-9ct" firstAttribute="top" secondItem="5te-dF-5Ti" secondAttribute="bottom" constant="60" id="Ojy-pF-6NH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sRL-HP-vn8" secondAttribute="trailing" constant="10" id="QBP-lS-6ls"/>
                 <constraint firstItem="HQH-V4-8w1" firstAttribute="leading" secondItem="DL8-xa-Eqv" secondAttribute="trailing" constant="20" id="YhS-B5-kcW"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="DL8-xa-Eqv" secondAttribute="bottom" constant="228" id="Zt5-WS-yaY"/>
                 <constraint firstItem="s9c-N4-NHj" firstAttribute="leading" secondItem="HQH-V4-8w1" secondAttribute="leading" id="ejR-Nw-ngp"/>
@@ -177,8 +184,10 @@
                 <constraint firstItem="5te-dF-5Ti" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="kXU-8c-NOC"/>
                 <constraint firstItem="5te-dF-5Ti" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="nHR-fG-8PT"/>
                 <constraint firstItem="DL8-xa-Eqv" firstAttribute="top" secondItem="N4e-KA-9ct" secondAttribute="bottom" constant="59" id="ooY-Wi-A2h"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="sRL-HP-vn8" secondAttribute="bottom" id="pMc-S5-1du"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="HQH-V4-8w1" secondAttribute="trailing" constant="20" id="paW-Qg-Ts3"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5te-dF-5Ti" secondAttribute="trailing" id="rON-Wu-kXe"/>
+                <constraint firstItem="sRL-HP-vn8" firstAttribute="top" secondItem="HQH-V4-8w1" secondAttribute="bottom" constant="5" id="rOv-x6-yKZ"/>
                 <constraint firstItem="N4e-KA-9ct" firstAttribute="top" secondItem="s9c-N4-NHj" secondAttribute="top" id="rRI-n0-S0J"/>
                 <constraint firstItem="s9c-N4-NHj" firstAttribute="leading" secondItem="N4e-KA-9ct" secondAttribute="trailing" constant="20" id="vOZ-XY-n8I"/>
             </constraints>
@@ -188,6 +197,7 @@
     <designables>
         <designable name="8Gg-ae-Rsk"/>
         <designable name="jgb-IT-UTk"/>
+        <designable name="mC0-gi-9Fb"/>
     </designables>
     <resources>
         <systemColor name="systemBackgroundColor">

@@ -9,11 +9,15 @@ import UIKit
 import HomeKit
 import WatchConnectivity
 import Lottie
+import Charts
 
 class AccessoryViewController: UIViewController {
     var home: HMHome!
     var room: HMRoom!
     var accessories: [HMAccessory] = []
+    var timers:[(Double, String)] = []
+    var timer = Timer()
+    var counter = 0.0
     @IBOutlet weak var seatCoverInput: UISwitch!
     @IBOutlet weak var fanInput: UISwitch!
     @IBOutlet weak var tempLabel: UILabel!
@@ -27,6 +31,7 @@ class AccessoryViewController: UIViewController {
     @IBOutlet weak var motionView: UIView!
     @IBOutlet weak var motionLabel: UILabel!
     @IBOutlet weak var seatOpenAnimationView: AnimationView!
+    @IBOutlet weak var barChartView: BarChartView!
     
     var accessory: HMAccessory!
     
@@ -111,7 +116,7 @@ class AccessoryViewController: UIViewController {
         seatOpenAnimationView!.loopMode = .playOnce
         seatOpenAnimationView!.animationSpeed = 0.5
         seatOpenAnimationView!.play()
-
+        
     }
     
     func getTempCharacteristic() -> HMCharacteristic? {
@@ -226,8 +231,18 @@ class AccessoryViewController: UIViewController {
             
             if isSitting {
                 self.motionLabel.text = "Occupied ⛔️"
+                self.timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.updateTimer), userInfo: nil, repeats: false)
+                
+                
             } else {
                 self.motionLabel.text = "Vacant ✅"
+                if self.counter != 0.0 {
+                    self.timer.invalidate()
+                    self.timers.append((self.counter, String(self.counter)))
+                    self.counter = 0.0
+                    self.updateGraph()
+                }
+                
             }
         }
     }
@@ -274,6 +289,11 @@ class AccessoryViewController: UIViewController {
             print("fan isOn : \(isOn)")
             self.fanInput.isOn = isOn
             
+            if (WCSession.default.isReachable) {
+                let message = ["isFanOn": isOn]
+                WCSession.default.sendMessage(message, replyHandler: nil)
+            }
+            
             self.configureFanAnimation(isOn: isOn)
             if self.fanInput.isOn == false {
                 self.fanAnimation.pause()
@@ -286,7 +306,6 @@ class AccessoryViewController: UIViewController {
             print("no target seat characteristics")
             return
         }
-        
         characteristicTargetSeatCover.writeValue(sender.isOn) { err in
             return
         }
@@ -298,11 +317,43 @@ class AccessoryViewController: UIViewController {
             print("no target seat characteristics")
             return
         }
-        
         characteristicTargetSeatCover.writeValue(sender.isOn) { err in
             return
         }
     }
+    
+    func updateGraph() {
+        
+        var barChartEntry = [BarChartDataEntry]()
+        
+        for i in 0..<timers.count {
+            
+            print("i = \(i)")
+            print(timers.count)
+            print(timers[i].0)
+            let value = BarChartDataEntry(x: Double(i), y: timers[i].0 , data: timers[i].1)
+            barChartEntry.append(value)
+            
+        }
+        
+        print("update graph")
+        var set1:BarChartDataSet! = nil
+        
+        set1 = BarChartDataSet(entries: barChartEntry, label: "PeePooTime")
+        set1.colors = ChartColorTemplates.material()
+        set1.drawValuesEnabled = false
+        
+        let data = BarChartData(dataSet: set1)
+        data.setValueFont(UIFont(name: "HelveticaNeue-Light", size: 10)!)
+        data.barWidth = 0.9
+        barChartView.data = data
+    }
+    
+    
+    @objc func updateTimer() {
+        counter = counter + 0.1
+    }
+    
 }
 
 extension AccessoryViewController: WCSessionDelegate {
@@ -319,13 +370,29 @@ extension AccessoryViewController: WCSessionDelegate {
     }
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-        guard let isOn = message["isOn"] as? Bool else {
-            return
+        
+        if message.first?.key == "isOn" {
+            
+            guard let isOn = message["isOn"] as? Bool else {
+                return
+            }
+            DispatchQueue.main.async {
+                self.seatCoverInput.isOn = isOn
+                self.onSwitch(self.seatCoverInput)
+            }
+            
         }
         
-        DispatchQueue.main.async {
-            self.seatCoverInput.isOn = isOn
-            self.onSwitch(self.seatCoverInput)
+        if message.first?.key == "isFanOn" {
+            guard let isOn = message["isFanOn"] as? Bool else {
+                return
+            }
+            DispatchQueue.main.async {
+                self.fanInput.isOn = isOn
+                self.onFanInputSwitch(self.fanInput)
+            }
         }
+        
+       
     }
 }
